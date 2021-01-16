@@ -51,10 +51,11 @@ function MessagesScreen(props) {
         refreshing={refreshing}
         onRefresh={() => {
           setMessages([
+            ...messages,
             {
-              id: 2,
-              title: "T2",
-              description: "D2",
+              id: messages.length + 1,
+              title: "T" + messages.length + 1,
+              description: "D" + messages.length + 1,
               image: require("../assets/UserAvatar01.jpg"),
             },
           ]);

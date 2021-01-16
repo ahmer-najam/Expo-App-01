@@ -10,6 +10,10 @@ import AppButton from "./app/components/AppButton";
 import AppCard from "./app/components/AppCard";
 import ListingDetails from "./app/components/ListingDetails";
 import MessagesScreen from "./app/screens/MessagesScreen";
+import AppScreen from "./app/components/AppScreen";
+import AppIcon from "./app/components/AppIcon";
+import colors from "./app/config/colors";
+import ListItem from "./app/components/ListItem";
 
 export default function App() {
   // return <WelcomeScreen />;
@@ -21,7 +25,15 @@ export default function App() {
     //     image={require("./app/assets/jacket.jpg")}
     //   />
     // </View>
-    <MessagesScreen />
+    <AppScreen>
+      <ListItem
+        title="My Title"
+        subTitle="My Sub Title"
+        ImageComponent={
+          <AppIcon name="email" size={50} backgroundColor="tomato" />
+        }
+      />
+    </AppScreen>
   );
 }
 
