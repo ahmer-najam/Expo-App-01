@@ -1,6 +1,14 @@
 import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View, Image, ImageBackground } from "react-native";
+import React, { useState } from "react";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ImageBackground,
+  TextInput,
+  Switch,
+} from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
@@ -14,26 +22,41 @@ import AppScreen from "./app/components/AppScreen";
 import AppIcon from "./app/components/AppIcon";
 import colors from "./app/config/colors";
 import ListItem from "./app/components/ListItem";
+import AccountScreen from "./app/screens/AccountScreen";
+import ListingScreen from "./app/screens/ListingScreen";
+import MyCard from "./app/components/MyCard";
+import AppTextInput from "./app/components/AppTextInput";
+import MyPicker from "./app/components/MyPicker";
+import MyPicker2 from "./app/components/MyPicker2";
+
+const item = {
+  id: 1,
+  title: "Red Jacket for Sale!!",
+  price: 100,
+  image: require("./app/assets/jacket.jpg"),
+};
+
+const categories = [
+  { label: "Furniture", value: 1 },
+  { label: "Clothing", value: 2 },
+  { label: "Cameras", value: 3 },
+];
 
 export default function App() {
-  // return <WelcomeScreen />;
+  const [isNew, setIsNew] = useState(false);
+  const [category, setCategory] = useState(categories[0]);
+
   return (
-    // <View style={styles.cardContainer}>
-    //   <AppCard
-    //     title="Red Jacket for sale!"
-    //     subTitle="$100"
-    //     image={require("./app/assets/jacket.jpg")}
-    //   />
-    // </View>
-    <AppScreen>
-      <ListItem
-        title="My Title"
-        subTitle="My Sub Title"
-        ImageComponent={
-          <AppIcon name="email" size={50} backgroundColor="tomato" />
-        }
+    <View style={styles.container}>
+      <MyPicker2
+        selectedItem={category}
+        onSelectItem={(category) => setCategory(category)}
+        items={categories}
+        icon="apps"
+        placeholder="Category"
       />
-    </AppScreen>
+      <AppTextInput icon="email" placeholder="Email" />
+    </View>
   );
 }
 
