@@ -28,6 +28,7 @@ import MyCard from "./app/components/MyCard";
 import AppTextInput from "./app/components/AppTextInput";
 import MyPicker from "./app/components/MyPicker";
 import MyPicker2 from "./app/components/MyPicker2";
+import LoginScreen from "./app/screens/LoginScreen";
 
 const item = {
   id: 1,
@@ -47,16 +48,18 @@ export default function App() {
   const [category, setCategory] = useState(categories[0]);
 
   return (
-    <View style={styles.container}>
-      <MyPicker2
-        selectedItem={category}
-        onSelectItem={(category) => setCategory(category)}
-        items={categories}
-        icon="apps"
-        placeholder="Category"
-      />
-      <AppTextInput icon="email" placeholder="Email" />
-    </View>
+    // <View style={styles.container}>
+    //   <MyPicker2
+    //     selectedItem={category}
+    //     onSelectItem={(category) => setCategory(category)}
+    //     items={categories}
+    //     icon="apps"
+    //     placeholder="Category"
+    //   />
+    //   <AppTextInput icon="email" placeholder="Email" />
+    // </View>
+
+    <LoginScreen />
   );
 }
 

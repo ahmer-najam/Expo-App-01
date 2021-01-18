@@ -14,6 +14,7 @@ export default {
     width: "85%",
   },
   textInput: {
+    width: "100%",
     ...Platform.select({
       ios: {
         fontSize: 20,
