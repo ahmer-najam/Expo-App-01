@@ -16,6 +16,7 @@ import colors from "../config/colors";
 import AppText from "../components/AppText";
 import MyErrors from "../components/MyErrors";
 import AppFormField from "../components/AppFormField";
+import AppSubmitButton from "../components/AppSubmitButton";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
@@ -64,7 +65,8 @@ function LoginScreen(props) {
               />
             </View>
             <View style={styles.buttonsContainer}>
-              <AppButton title="Login" color="primary" onPress={handleSubmit} />
+              <AppSubmitButton title="Login" />
+              {/* <AppButton title="Login" color="primary" onPress={handleSubmit} /> */}
             </View>
           </>
         )}

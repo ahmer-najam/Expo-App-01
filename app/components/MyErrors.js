@@ -4,7 +4,6 @@ import colors from "../config/colors";
 import AppText from "./AppText";
 
 function MyErrors({ error, visiable }) {
-  console.log(error);
   if (!visiable || !error) return null;
   return <AppText style={styles.error}>{error}</AppText>;
 }
