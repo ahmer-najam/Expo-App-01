@@ -1,14 +1,12 @@
 import React from "react";
 import { useFormikContext } from "formik";
 
-import colors from "../config/colors";
-import AppButton from "./AppButton";
-import { View } from "react-native";
+import AppButton from "../AppButton";
 
 function AppSubmitButton({ title }) {
   const { handleSubmit } = useFormikContext();
 
-  return <AppButton title={title} color="primary" onPress={handleSubmit} />;
+  return <AppButton title={title} onPress={handleSubmit} />;
 }
 
 export default AppSubmitButton;

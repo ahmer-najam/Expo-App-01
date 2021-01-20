@@ -13,6 +13,11 @@ export default {
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
     width: "85%",
   },
+  pickerPlaceHolderText: {
+    fontSize: 18,
+    fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
+    width: "85%",
+  },
   textInput: {
     width: "100%",
     ...Platform.select({

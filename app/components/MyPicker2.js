@@ -30,6 +30,14 @@ function MyPicker2({
               color={defaultStyles.colors.darkGrey}
             />
           )}
+          {/* {selectedItem ? (
+            <AppText style={defaultStyles.pickerText}>
+              {selectedItem ? selectedItem.label : placeholder}
+            </AppText>
+          ) : (
+            <AppText style={defaultStyles.placeholder}>{placeholder}</AppText>
+          )} */}
+
           <AppText style={defaultStyles.pickerText}>
             {selectedItem ? selectedItem.label : placeholder}
           </AppText>
@@ -70,6 +78,10 @@ const styles = StyleSheet.create({
     width: "100%",
     padding: 15,
     marginVertical: 10,
+  },
+  placeholder: {
+    color: defaultStyles.colors.mediumGrey,
+    flex: 1,
   },
 });
 export default MyPicker2;

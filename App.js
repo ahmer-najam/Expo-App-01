@@ -26,9 +26,10 @@ import AccountScreen from "./app/screens/AccountScreen";
 import ListingScreen from "./app/screens/ListingScreen";
 import MyCard from "./app/components/MyCard";
 import AppTextInput from "./app/components/AppTextInput";
-import MyPicker from "./app/components/MyPicker";
+
 import MyPicker2 from "./app/components/MyPicker2";
 import LoginScreen from "./app/screens/LoginScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 
 const item = {
   id: 1,
@@ -59,7 +60,7 @@ export default function App() {
     //   <AppTextInput icon="email" placeholder="Email" />
     // </View>
 
-    <LoginScreen />
+    <ListingEditScreen />
   );
 }
 

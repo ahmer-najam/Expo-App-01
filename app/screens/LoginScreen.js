@@ -1,22 +1,7 @@
 import React from "react";
-import { Formik } from "formik";
 import * as Yup from "yup";
-import {
-  StyleSheet,
-  Image,
-  ImageBackground,
-  View,
-  Text,
-  TextInput,
-} from "react-native";
-import AppButton from "../components/AppButton";
-import AppScreen from "../components/AppScreen";
-import AppTextInput from "../components/AppTextInput";
-import colors from "../config/colors";
-import AppText from "../components/AppText";
-import MyErrors from "../components/MyErrors";
-import AppFormField from "../components/AppFormField";
-import AppSubmitButton from "../components/AppSubmitButton";
+import { StyleSheet, Image, ImageBackground, View, Text } from "react-native";
+import { AppForm, AppFormField, AppSubmitButton } from "../components/form";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
@@ -37,40 +22,36 @@ function LoginScreen(props) {
         />
         <Text style={styles.tagLine}>Sell What You EAT</Text>
       </View>
-      <Formik
+
+      <AppForm
         initialValues={{ email: "", password: "" }}
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
-          <>
-            <View style={styles.container}>
-              <AppFormField
-                name="email"
-                autoCapitalize="none"
-                autoCorrect={false}
-                icon="email"
-                keyboardType="email-address"
-                placeholder="Email"
-                textContentType="emailAddress"
-              />
-              <AppFormField
-                name="password"
-                autoCapitalize="none"
-                autoCorrect={false}
-                icon="lock"
-                placeholder="Password"
-                secureTextEntry
-                textContentType="password"
-              />
-            </View>
-            <View style={styles.buttonsContainer}>
-              <AppSubmitButton title="Login" />
-              {/* <AppButton title="Login" color="primary" onPress={handleSubmit} /> */}
-            </View>
-          </>
-        )}
-      </Formik>
+        <View style={styles.container}>
+          <AppFormField
+            name="email"
+            autoCapitalize="none"
+            autoCorrect={false}
+            icon="email"
+            keyboardType="email-address"
+            placeholder="Email"
+            textContentType="emailAddress"
+          />
+          <AppFormField
+            name="password"
+            autoCapitalize="none"
+            autoCorrect={false}
+            icon="lock"
+            placeholder="Password"
+            secureTextEntry
+            textContentType="password"
+          />
+        </View>
+        <View style={styles.buttonsContainer}>
+          <AppSubmitButton title="Login" />
+        </View>
+      </AppForm>
     </ImageBackground>
   );
 }
@@ -83,8 +64,11 @@ const styles = StyleSheet.create({
   },
   buttonsContainer: {
     position: "absolute",
+    alignItems: "center",
     padding: 20,
     width: "100%",
+    flex: 1,
+    top: 650,
   },
   logo: {
     width: 200,
