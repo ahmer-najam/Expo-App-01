@@ -60,7 +60,7 @@ export default function App() {
     //   <AppTextInput icon="email" placeholder="Email" />
     // </View>
 
-    <ListingEditScreen />
+    <MessagesScreen />
   );
 }
 

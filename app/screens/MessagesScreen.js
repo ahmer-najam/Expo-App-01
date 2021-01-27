@@ -11,8 +11,10 @@ import { setStatusBarNetworkActivityIndicatorVisible } from "expo-status-bar";
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title:
+      "T1 sdfsdf sdsffffffffsf     fsfsfdsfadfsdfsdfsdffsdfadafsdafsfaf sdfsdfsdfsdfsde sfafdadafasdfadf adfafafadfad",
+    description:
+      "D1  sdfsdf sdsffffffffsf     fsfsfdsfadfsdfsdfsdffsdfadafsdafsfaf sdfsdfsdfsdfsde sfafdadafasdfadf adfafafadfad",
     image: require("../assets/UserAvatar01.jpg"),
   },
   {
