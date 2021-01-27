@@ -7,16 +7,20 @@ export default {
     fontSize: 18,
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
     width: "100%",
+    color: colors.input 
   },
   pickerText: {
     fontSize: 18,
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
     width: "85%",
+    color: colors.input
   },
   pickerPlaceHolderText: {
     fontSize: 18,
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
     width: "85%",
+    flex:1,
+    color: colors.placeHolder,    
   },
   textInput: {
     width: "100%",

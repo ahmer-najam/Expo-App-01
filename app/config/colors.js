@@ -9,4 +9,6 @@ export default {
   cream: "#fff9c4",
   mediumGrey: "#b0bec5",
   darkGrey: "#808e95",
+  placeHolder: "#90a4ae",
+  input: "#37474f"
 };

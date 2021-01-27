@@ -30,17 +30,14 @@ function MyPicker2({
               color={defaultStyles.colors.darkGrey}
             />
           )}
-          {/* {selectedItem ? (
+          {selectedItem ? (
             <AppText style={defaultStyles.pickerText}>
               {selectedItem ? selectedItem.label : placeholder}
             </AppText>
           ) : (
-            <AppText style={defaultStyles.placeholder}>{placeholder}</AppText>
-          )} */}
+            <AppText style={defaultStyles.pickerPlaceHolderText}>{placeholder}</AppText>
+          )}
 
-          <AppText style={defaultStyles.pickerText}>
-            {selectedItem ? selectedItem.label : placeholder}
-          </AppText>
           <MaterialCommunityIcons
             name="chevron-down"
             size={25}
