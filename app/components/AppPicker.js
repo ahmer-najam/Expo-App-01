@@ -7,14 +7,16 @@ import defaultStyles from "../config/styles";
 import AppText from "./AppText";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import AppScreen from "./AppScreen";
-import MyPickerItem from "./MyPickerItem";
+import AppPickerItem from "./AppPickerItem";
 
-function MyPicker2({
+function AppPicker2({
   icon,
   items,
   onSelectItem,
   placeholder,
   selectedItem,
+  PickerItemComponent = AppPickerItem,
+  numberOfColumns = 1,
   ...otherProps
 }) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -51,8 +53,10 @@ function MyPicker2({
           <FlatList
             data={items}
             keyExtractor={(item) => item.value.toString()}
+            numColumns={numberOfColumns}
             renderItem={({ item }) => (
-              <MyPickerItem
+              <PickerItemComponent
+                item={item}
                 label={item.label}
                 onPress={() => {
                   setModalVisible(false);
@@ -81,4 +85,4 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-export default MyPicker2;
+export default AppPicker2;

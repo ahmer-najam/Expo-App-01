@@ -2,7 +2,6 @@ import React from "react";
 import { FlatList, StyleSheet, View } from "react-native";
 import AppScreen from "../components/AppScreen";
 import AppCard from "../components/AppCard";
-import MyCard from "../components/MyCard";
 import colors from "../config/colors";
 
 const listing = [
@@ -27,7 +26,7 @@ function ListingScreen(props) {
         data={listing}
         keyExtractor={(listing) => listing.id.toString()}
         renderItem={({ item }) => (
-          <MyCard
+          <AppCard
             title={item.title}
             subTitle={"$ " + item.price}
             image={item.image}

@@ -1,22 +1,23 @@
 import React from "react";
-import { View, StyleSheet, Image, Text } from "react-native";
+import { StyleSheet, Image, View } from "react-native";
 
-import { AppText } from "./AppText";
 import colors from "../config/colors";
+import AppText from "./AppText";
 
 function AppCard({ title, subTitle, image }) {
   return (
-    <View style={styles.card}>
+    <View style={styles.container}>
       <Image style={styles.image} source={image} />
       <View style={styles.detailContainer}>
-        <AppText style={styles.title}>Red Jacket for Sale!</AppText>
+        <AppText style={styles.title}>{title}</AppText>
+        <AppText style={styles.subTitle}>{subTitle}</AppText>
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  card: {
+  container: {
     borderRadius: 15,
     backgroundColor: colors.white,
     marginBottom: 20,
@@ -25,6 +26,7 @@ const styles = StyleSheet.create({
   detailContainer: {
     padding: 20,
   },
+
   image: {
     width: "100%",
     height: 200,
@@ -38,4 +40,5 @@ const styles = StyleSheet.create({
     color: colors.black,
   },
 });
+
 export default AppCard;

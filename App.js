@@ -10,24 +10,23 @@ import {
   Switch,
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 import AppText from "./app/components/AppText";
 import AppButton from "./app/components/AppButton";
-import AppCard from "./app/components/AppCard";
-import ListingDetails from "./app/components/ListingDetails";
+
+
 import MessagesScreen from "./app/screens/MessagesScreen";
 import AppScreen from "./app/components/AppScreen";
 import AppIcon from "./app/components/AppIcon";
 import colors from "./app/config/colors";
-import ListItem from "./app/components/ListItem";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingScreen from "./app/screens/ListingScreen";
-import MyCard from "./app/components/MyCard";
 import AppTextInput from "./app/components/AppTextInput";
 
-import MyPicker2 from "./app/components/MyPicker2";
 import LoginScreen from "./app/screens/LoginScreen";
 import ListingEditScreen from "./app/screens/ListingEditScreen";
 
@@ -49,18 +48,8 @@ export default function App() {
   const [category, setCategory] = useState(categories[0]);
 
   return (
-    // <View style={styles.container}>
-    //   <MyPicker2
-    //     selectedItem={category}
-    //     onSelectItem={(category) => setCategory(category)}
-    //     items={categories}
-    //     icon="apps"
-    //     placeholder="Category"
-    //   />
-    //   <AppTextInput icon="email" placeholder="Email" />
-    // </View>
 
-    <MessagesScreen />
+    <ListingScreen />
   );
 }
 

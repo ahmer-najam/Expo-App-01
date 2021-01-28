@@ -3,7 +3,7 @@ import { StyleSheet, View, FlatList } from "react-native";
 
 import AppScreen from "../components/AppScreen";
 import AppIcon from "../components/AppIcon";
-import ListItem from "../components/ListItem";
+import AppListItem from "../components/AppListItem";
 import colors from "../config/colors";
 import AppListItemSeparator from "../components/AppListItemSeparator";
 
@@ -22,7 +22,7 @@ function AccountScreen(props) {
   return (
     <AppScreen style={styles.screen}>
       <View style={styles.container}>
-        <ListItem
+        <AppListItem
           title="Ahmer Najam"
           subTitle="ahmer.najam@gmail.com"
           image={require("../assets/AhmerProfile.jpg")}

@@ -3,10 +3,10 @@ import { TouchableOpacity, StyleSheet } from "react-native";
 import AppListItemSeparator from "./AppListItemSeparator";
 import AppText from "./AppText";
 
-function MyPickerItem({ label, onPress }) {
+function AppPickerItem({ item, onPress }) {
   return (
     <TouchableOpacity onPress={onPress}>
-      <AppText style={styles.text}>{label}</AppText>
+      <AppText style={styles.text}>{item.label}</AppText>
       <AppListItemSeparator />
     </TouchableOpacity>
   );
@@ -18,4 +18,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyPickerItem;
+export default AppPickerItem;

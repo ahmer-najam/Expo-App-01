@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FlatList, View } from "react-native";
 
-import ListItem from "../components/ListItem";
+import AppListItem from "../components/AppListItem";
 import AppScreen from "../components/AppScreen";
 import colors from "../config/colors";
 import AppListItemSeparator from "../components/AppListItemSeparator";
@@ -39,7 +39,7 @@ function MessagesScreen(props) {
         data={messages}
         keyExtractor={(message) => message.id.toString()}
         renderItem={({ item }) => (
-          <ListItem
+          <AppListItem
             title={item.title}
             subTitle={item.description}
             image={item.image}

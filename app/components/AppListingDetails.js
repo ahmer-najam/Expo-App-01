@@ -3,9 +3,9 @@ import { View, Image, StyleSheet } from "react-native";
 
 import AppText from "./AppText";
 import colors from "../config/colors";
-import ListItem from "./ListItem";
+import AppListItem from "./AppListItem";
 
-function ListingDetails(props) {
+function AppListingDetails(props) {
   return (
     <View>
       <Image style={styles.image} source={require("../assets/jacket.jpg")} />
@@ -13,7 +13,7 @@ function ListingDetails(props) {
         <AppText style={styles.title}>Red Jacket for Sale!</AppText>
         <AppText style={styles.subTitle}>$100</AppText>
         <View style={styles.userContainer}>
-          <ListItem
+          <AppListItem
             image={require("../assets/UserAvatar01.jpg")}
             title="Ahmer Najam"
             subTitle="5 Listings"
@@ -50,4 +50,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ListingDetails;
+export default AppListingDetails;
